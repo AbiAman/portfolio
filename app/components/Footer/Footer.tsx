@@ -26,7 +26,7 @@ const Footer = () => {
           })}
         </div>
         <p className="text-white opacity-60 mt-6 text-center">
-          © 2024 All Rignts Reserved by Aman
+          © 2025 All Rights Reserved by Aman
         </p>
       </div>
     </div>
