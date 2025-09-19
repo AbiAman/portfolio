@@ -1,6 +1,6 @@
 export const BaseInfo = {
-  name: "Amanuel",
-  position: "Web Developer & Graphics Designer",
+  name: "Amanuel Hailu",
+  position: "Web Developer | Fullstack Developer | Graphics Designer",
   description:
     "🚀 Turning ideas into powerful digital experiences.I build scalable full stack applications with creativity and precision.Design meets technology to bring your vision to life.",
   profilePic: "/images/hero.jpg",

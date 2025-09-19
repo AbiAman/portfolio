@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { BaseInfo } from "@/app/Data/data";
 import Image from "next/image";
 import React from "react";
-import { FaDownload } from "react-icons/fa";
 import { Quicksand } from "next/font/google";
 import Link from "next/link";
 
@@ -22,8 +21,9 @@ function Hero() {
           {/* image content*/}
           <motion.div
             initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeIn", delay: 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: false, amount: 0.3 }}
             className=" mx-auto hidden lg:block rounded-2xl  overflow-x-hidden"
           >
             <Image
@@ -36,18 +36,19 @@ function Hero() {
           {/*text content */}
           <motion.div
             initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             className=""
           >
             {/* sub Heading */}
-            <h1
-              className={`${font.className}} antialiased text-xl md:text-3xl lg:text-4xl mb-5 text-gray-300 font-semibold`}
-            >
-              I am {BaseInfo.name}
-            </h1>
+
             {/* title */}
-            <h1 className="text-bg text-3xl  md:text-4xl lg:text-5xl xl:text-6xl font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-white ">
+            <h1 className="text-bg text-3xl  md:text-5xl lg:text-6xl xl:text-6xl font-bold md:leading-[3rem] lg:leading-[3.5rem] xl:leading-[4rem] text-white ">
+              {BaseInfo.name}
+            </h1>
+            <h1
+              className={`${font.className}} antialiased  md:text-[20px] mb-5 mt-5 text-gray-300 font-semibold`}
+            >
               {BaseInfo.position}
             </h1>
             {/* Description */}
@@ -57,8 +58,8 @@ function Hero() {
             {/* Button */}
             <div className="flex items-center   space-x-4">
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                <button className="md:px-8 md:py-2 px-6 py-2  text-[#246ef7] font-semibold animate-bounce [animation-duration:2s] text-sm md:text-lg hover:bg-black hover:text-white border transition-all duration-200  cursor-pointer  rounded-full mt-8 bg-white flex items-center space-x-1">
-                  <span>Resume</span>
+                <button className="md:px-8 md:py-2 px-6 py-2  text-white font-semibold animate-bounce [animation-duration:2s] text-sm md:text-lg hover:scale-105 hover:shadow-[0_0_20px_5px_rgba(36,110,247,0.7)] transition-all duration-200  cursor-pointer  rounded-full mt-8 bg-linear-to-l from-[#246ef7] to-[#1f09e9] flex items-center space-x-1">
+                  <span>View Resume</span>
                 </button>
               </a>
               {/* <button className="md:px-8 md:py-2 px-6 py-2 text-white border  font-semibold text-sm md:text-lg hover:bg-white hover:text-[#246ef7] transition-all duration-200 cursor-pointer rounded-full mt-8 flex items-center space-x-1">

@@ -4,6 +4,7 @@ import SectionHeading from "../Helper/SectionHeading";
 import { aboutInfo } from "@/app/Data/data";
 import { FaLaptopCode } from "react-icons/fa";
 import Image from "next/image";
+import { LuGraduationCap } from "react-icons/lu";
 import { FaPaintbrush } from "react-icons/fa6";
 import { CgWebsite } from "react-icons/cg";
 import { motion } from "framer-motion";
@@ -22,8 +23,8 @@ const About = () => {
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
           <h1 className="text-bg text-[24px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-200">
             {aboutInfo.title}
@@ -61,61 +62,46 @@ const About = () => {
         {/* State Content */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-          className="grid grid-cols-2 gap-16 items-center lg:mx-auto"
+          className=" flex items-center lg:mx-auto"
         >
-          {/* 1st stat */}
-          <div>
-            <Image
-              src="/images/web.png"
-              alt="users"
-              width={200}
-              height={200}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-white text-center">
-              {aboutInfo.client}{" "}
-            </p>
-          </div>
-          {/* 2nd stat */}
-          <div>
-            <Image
-              src="/images/gd.png"
-              alt="users"
-              width={100}
-              height={100}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-white text-center">
-              {aboutInfo.experience}{" "}
-            </p>
-          </div>
-          {/* 3rd stat */}
-          <div>
-            <Image
-              src="/images/ux.png"
-              alt="users"
-              width={150}
-              height={150}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-white text-center">
-              {aboutInfo.project}{" "}
-            </p>
-          </div>
-          {/* 4th stat */}
-          <div>
-            <Image
-              src="/images/problam.png"
-              alt="users"
-              width={150}
-              height={150}
-              className="mx-auto"
-            />
-            <p className="mt-3 font-bold text-xl text-white text-center">
-              {aboutInfo.website}{" "}
-            </p>
+          <div className="p-6 flex items-center justify-center">
+            <div className="w-full max-w-2xl bg-[#131519] border border-[#5d5f63] rounded-2xl p-6 md:p-8">
+              {/* Heading */}
+              <h1 className="text-2xl md:text-3xl text-white font-bold mb-6">
+                Education
+              </h1>
+
+              {/* Icon + Content */}
+              <div className="flex items-start space-x-4">
+                {/* Icon */}
+                <div className="flex items-center p-3 justify-center bg-gradient-to-l from-[#246ef7] to-[#1f09e9] rounded-full w-14 h-14 md:w-16 md:h-16">
+                  <LuGraduationCap
+                    size={28}
+                    className="text-white md:size-32"
+                  />
+                </div>
+
+                {/* Text Content */}
+                <div className="flex flex-col">
+                  <p className="text-white text-lg md:text-xl font-semibold">
+                    Bachelor of Science in Information Technology
+                  </p>
+                  <p className="text-[#3bb3f9] text-base md:text-lg font-medium">
+                    Haramaya University
+                  </p>
+                  <p className="text-gray-300 text-sm md:text-base mt-1">
+                    CGPA: 3.57
+                  </p>
+                  <p className="text-gray-400 text-sm md:text-base mt-2 leading-relaxed">
+                    Comprehensive study in IT fundamentals, programming,
+                    networking, and system administration with hands-on
+                    experience in various technologies.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

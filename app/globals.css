@@ -7,7 +7,7 @@
                          after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-right
     }
     .text-bg {
-      background-image: linear-gradient(to right ,#246ef7 0% ,#1f09e9 100%) ;
+      background-image: linear-gradient(to right ,#4c89f8 25% ,#1f09e9 100%) ;
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
