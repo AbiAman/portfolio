@@ -34,7 +34,7 @@ const Services = () => {
         {servicesData.map((service) => {
           return (
             <motion.div
-              animate={{ scale: [1, 1.2, 1.2, 1] }}
+              whileInView={{ scale: [1, 1.1, 1.1, 1] }}
               transition={{ duration: 1, ease: "easeInOut" }}
               variants={gridSquareVariants}
               key={service.id}

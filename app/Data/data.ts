@@ -230,4 +230,5 @@ export const contactData = {
   email: "amanithetop@gmail.com",
   email2: "amani.hi.0941@gmail.com",
   address: "Ethiopia , Hawassa",
+  linkedin: "www.linkedin.com/in/amanuel-hailu-4b3898284",
 };
