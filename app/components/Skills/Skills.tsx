@@ -1,21 +1,16 @@
 "use client";
 import React from "react";
 import SectionHeading from "../Helper/SectionHeading";
-import { skillsData } from "@/app/Data/data";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
   return (
-    <div className="pt-16 pb-16 bg-linear-to-r from-[#1a1919] to-[#000000]">
+    <div className="pt-16 pb-8 bg-linear-to-r from-[#1a1919] to-[#000000]">
       <SectionHeading>My Skills</SectionHeading>
-      <div className="w-[80%] mx-auto mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 items-center">
-        {skillsData.map((skill) => {
-          return (
-            <div key={skill.id}>
-              <SkillCard skill={skill} />
-            </div>
-          );
-        })}
+      <div className="w-[80%] mx-auto mt-20  items-center">
+        <div>
+          <SkillCard />
+        </div>
       </div>
     </div>
   );
