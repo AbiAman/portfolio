@@ -8,6 +8,9 @@ import { MdLocationOn } from "react-icons/md";
 const ContactInfo = () => {
   return (
     <div>
+      <div className="text-white font-bold text-2xl md:text-3xl mt-5 mb-5">
+        Get In Touch
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
         {/* PHONE */}
         <div className="bg-transparent rounded-2xl border border-gray-400 w-full p-5">
