@@ -74,7 +74,7 @@ const About = () => {
               </h1>
 
               {/* Icon + Content */}
-              <div className="flex items-start space-x-4">
+              <div className="md:flex flex-row items-start  space-y-4 space-x-4">
                 {/* Icon */}
                 <div className="flex items-center p-3 justify-center bg-gradient-to-l from-[#246ef7] to-[#1f09e9] rounded-full w-14 h-14 md:w-16 md:h-16">
                   <LuGraduationCap

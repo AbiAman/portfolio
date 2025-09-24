@@ -12,7 +12,7 @@ import { TiSocialLinkedin } from "react-icons/ti";
 
 const Footer = () => {
   return (
-    <div className="pt-16 pb-15  bg-gradient-to-b from-[#101725] to-[#020305]">
+    <div className="pt-16 pb-15  bg-gradient-to-b from-[#101725] to-[#020305] w-full h-full">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -101,9 +101,9 @@ const Footer = () => {
           </div>
         </div>
       </motion.div>
-      <div className="mx-auto w-[80%] bg-gray-400 h-[0.5px] mt-12 mb-5 opacity-75"></div>
+      <div className="mx-auto w-[80%] bg-gray-400 h-[0.5px] mt-12 mb-5 opacity-75 "></div>
       <motion.p
-        initial={{ opacity: 0, y: 100 }}
+        initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }}
         viewport={{ once: false, amount: 0.5 }}
