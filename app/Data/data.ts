@@ -120,6 +120,11 @@ export const projectGraphics= [
     image: "/images/gd/gd4.jpg",
     
   },
+  {
+    id: 6,
+    image: "/images/gd/gd5.jpg",
+    
+  },
 
 ];
 

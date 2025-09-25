@@ -11,7 +11,7 @@ const Project2 = () => {
       className="pt-16 pb-16 bg-gradient-to-l from-[#060707] to-[#181818]"
     >
       <div className="mt-8">
-        <SectionHeading> Web Project</SectionHeading>
+        <SectionHeading> Web Development</SectionHeading>
       </div>
       <div className="w-[80%] mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-center">
         {projectData.map((project) => {
