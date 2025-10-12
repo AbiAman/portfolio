@@ -125,7 +125,6 @@ export const projectGraphics= [
     image: "/images/gd/gd5.jpg",
     
   },
-  ,
   {
     id: 7,
     image: "/images/gd/figma.jpg",
