@@ -136,7 +136,7 @@ const SkillCard = () => {
             <FaPaintBrush size={25} />
           </div>
           <h2 className="font-semibold text-white text-[20px] md:text-2xl my-5">
-            Graphics Design
+            UI/UX Design
           </h2>
           <div>
             <div className="mb-1 text-base font-medium text-[12px] text-gray-300 opacity-70">
