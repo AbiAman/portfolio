@@ -25,6 +25,12 @@ export const navLinks=[
 },
 {
     id:5,
+    url:"#Pricing",
+    lable:"Pricing"
+
+},
+{
+    id:6,
     url:"#contacts",
     lable:"Contacts"
 
