@@ -2,6 +2,8 @@
 import React from "react";
 import SectionHeading from "../Helper/SectionHeading";
 import PriceCard from "./PriceCard";
+import PriceCardUI from "./PriceCardUI";
+import PriceCardDev from "./PriceCardDev";
 
 function Price() {
   return (
@@ -13,6 +15,8 @@ function Price() {
       <div className="w-[80%] mx-auto mt-20 mb-8 items-center">
         <div>
           <PriceCard />
+          <PriceCardUI />
+          <PriceCardDev />
         </div>
       </div>
     </div>

@@ -161,7 +161,7 @@ const SkillCard = () => {
               Adobe Photoshop
             </span>
             <span className="bg-transparent hover:bg-gray-400 border  mt-5 rounded-3xl py-0.5 px-3 w-fit text-[13px] text-white">
-              Illustrator
+              Adobe Illustrator
             </span>
             <span className="bg-transparent hover:bg-gray-400 border  mt-5 rounded-3xl py-0.5 px-3 w-fit text-[13px] text-white">
               Figma

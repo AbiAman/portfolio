@@ -1,26 +1,18 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaPaintBrush } from "react-icons/fa";
-import { BsCheckCircleFill } from "react-icons/bs";
-
-function PriceCard() {
+import { BsCheckCircleFill, BsWindowFullscreen } from "react-icons/bs";
+const PriceCardUI = () => {
   const [selectedPlanB, setSelectedPlanB] = useState("standard");
   const [selectedPlanS, setSelectedPlanS] = useState("standard");
   const [selectedPlanP, setSelectedPlanP] = useState("standard");
   return (
-    <div>
+    <div className="my-12">
       <div className=" items-center justify-center w-full flex flex-col">
-        <p className="text-xl md:text-[22px] text-gray-300 font-light mb-16 text-center">
-          Choose the plan that fits your project--- whether it is design ,
-          development or full creative execution
-        </p>
-      </div>
-      <div className=" items-center justify-center w-full flex flex-col">
-        <div className="flex text-white rounded-2xl bg-gradient-to-r from-[#25C9EF] to-[#398AF5] p-3 mb-3 items-center justify-center w-fit group-hover:scale-110">
-          <FaPaintBrush size={20} />
+        <div className="flex text-white rounded-2xl bg-gradient-to-r from-[#7aeb7a] to-[#00f80c] p-3 mb-3 items-center justify-center w-fit group-hover:scale-110">
+          <BsWindowFullscreen size={20} />
         </div>
-        <p className="text-xl md:text-[16px] text-[#398AF5] font-light mb-16 text-center">
-          Logo, Banner, Poster & Brand identity
+        <p className="text-xl md:text-[16px] text-[#00f80c] font-light mb-16 text-center">
+          Website, App & Dashboard Design
         </p>
       </div>
       <motion.div
@@ -46,8 +38,8 @@ function PriceCard() {
                 onClick={() => setSelectedPlanB("standard")}
                 className={`  cursor-pointer mb-1 text-base font-medium text-[10px] rounded-2xl text-center px-3 py-0.5 transition-all duration-300 ${
                   selectedPlanB === "standard"
-                    ? "bg-[#398AF5] text-white"
-                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#398AF5] hover:text-white"
+                    ? "bg-[#00f80c] text-white"
+                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#9cffa1] hover:text-white"
                 }`}
               >
                 Standard
@@ -56,8 +48,8 @@ function PriceCard() {
                 onClick={() => setSelectedPlanB("professional")}
                 className={`mb-1 cursor-pointer text-base font-medium text-[10px] rounded-2xl text-center px-3 py-0.5 transition-all duration-300 ${
                   selectedPlanB === "professional"
-                    ? "bg-[#398AF5] text-white"
-                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#398AF5] hover:text-white"
+                    ? "bg-[#00f80c] text-white"
+                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#93ff99] hover:text-white"
                 }}`}
               >
                 Professional
@@ -67,13 +59,13 @@ function PriceCard() {
             {/* Prices */}
             <div className="w-full flex flex-col items-center mt-3">
               {selectedPlanB === "standard" && (
-                <p className="text-[#398AF5] font-semibold text-2xl">
-                  2,500–5,000 ETB
+                <p className="text-[#00f80c] font-semibold text-2xl">
+                  4,000–6,000 ETB
                 </p>
               )}
               {/* {selectedPlanB === "professional" && (
-                <p className="text-[#398AF5] font-semibold text-2xl">
-                  3000–5000 ETB
+                <p className="text-[#00f80c] font-semibold text-2xl">
+                  5000–7000 ETB
                 </p>
               )} */}
               <p className="text-gray-200 font-light text-[12px] mt-1 opacity-75">
@@ -81,34 +73,34 @@ function PriceCard() {
               </p>
             </div>
             <div className="flex flex-col space-y-3 items-start  my-5">
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  1 Concept Design
+                  1-3 Screen Design
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  1 Revision Round
+                  Figma File
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  PNG/JPEG Delivery
+                  Minimal User Flow
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  2-3 Day Delivery
+                  Basic Prototype
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  Basic Support
+                  3-4 Day Delivery
                 </span>
               </div>
             </div>
@@ -119,7 +111,7 @@ function PriceCard() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut" }}
-          className="group shadow shadow-amber-50 hover:shadow-xl  w-full p-4 bg-gradient-to-r flex flex-col items-center justify-center scale-110 from-[#15161a] to-transparent border border-[#0717f5] rounded-2xl "
+          className="group shadow shadow-amber-50 hover:shadow-xl  w-full p-4 bg-gradient-to-r flex flex-col items-center justify-center scale-110 from-[#15161a] to-transparent border border-[#00f80c] rounded-2xl "
         >
           <h2 className=" text-gray-400 text-[12px] md:text-sm my-2">
             Recommended
@@ -133,8 +125,8 @@ function PriceCard() {
                 onClick={() => setSelectedPlanS("standard")}
                 className={`  cursor-pointer mb-1 text-base font-medium text-[10px] rounded-2xl text-center px-3 py-0.5 transition-all duration-300 ${
                   selectedPlanS === "standard"
-                    ? "bg-[#398AF5] text-white"
-                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#398AF5] hover:text-white"
+                    ? "bg-[#00f80c] text-white"
+                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#a1fca6] hover:text-white"
                 }`}
               >
                 Standard
@@ -143,8 +135,8 @@ function PriceCard() {
                 onClick={() => setSelectedPlanS("professional")}
                 className={`mb-1 cursor-pointer text-base font-medium text-[10px] rounded-2xl text-center px-3 py-0.5 transition-all duration-300 ${
                   selectedPlanS === "professional"
-                    ? "bg-[#398AF5] text-white"
-                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#398AF5] hover:text-white"
+                    ? "bg-[#00f80c] text-white"
+                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#50fd59] hover:text-white"
                 }}`}
               >
                 Professional
@@ -154,13 +146,13 @@ function PriceCard() {
             {/* Prices */}
             <div className="w-full flex flex-col items-center justify-center mt-3">
               {selectedPlanS === "standard" && (
-                <p className="text-[#398AF5] font-semibold text-2xl">
-                  5,000–7,000 ETB
+                <p className="text-[#00f80c] font-semibold text-2xl">
+                  7,000–9,000 ETB
                 </p>
               )}
               {/* {selectedPlanS === "professional" && (
-                <p className="text-[#398AF5] font-semibold text-2xl">
-                  6000–7000 ETB
+                <p className="text-[#00f80c] font-semibold text-2xl">
+                  8000–9500 ETB
                 </p>
               )} */}
               <p className="text-gray-200 font-light text-[12px] mt-1 opacity-75">
@@ -168,37 +160,43 @@ function PriceCard() {
               </p>
             </div>
             <div className="flex flex-col space-y-3 items-start  my-5">
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  2 Concept Designs
+                  3-5 Screen Designs
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  3 Revision Rounds
+                  Complete User Flow
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  PNG/JPEG Delivery
+                  Interactive Prototype
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  Source Files (PSD)
+                  Responsive Layout
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  3-5 Day Delivery
+                  Design System Basics
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
+                <BsCheckCircleFill />
+                <span className="text-white text-base font-light ">
+                  5-7 Day Delivery
+                </span>
+              </div>
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
                   Priority Support
@@ -223,8 +221,8 @@ function PriceCard() {
                 onClick={() => setSelectedPlanP("standard")}
                 className={`  cursor-pointer mb-1 text-base font-medium text-[10px] rounded-2xl text-center px-3 py-0.5 transition-all duration-300 ${
                   selectedPlanP === "standard"
-                    ? "bg-[#398AF5] text-white"
-                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#398AF5] hover:text-white"
+                    ? "bg-[#00f80c] text-white"
+                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#8aff90] hover:text-white"
                 }`}
               >
                 Standard
@@ -233,8 +231,8 @@ function PriceCard() {
                 onClick={() => setSelectedPlanP("professional")}
                 className={`mb-1 cursor-pointer text-base font-medium text-[10px] rounded-2xl text-center px-3 py-0.5 transition-all duration-300 ${
                   selectedPlanP === "professional"
-                    ? "bg-[#398AF5] text-white"
-                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#398AF5] hover:text-white"
+                    ? "bg-[#00f80c] text-white"
+                    : "bg-[#ffffff] text-black opacity-70 hover:bg-[#75f87b] hover:text-white"
                 }}`}
               >
                 Professional
@@ -244,13 +242,13 @@ function PriceCard() {
             {/* Prices */}
             <div className="w-full flex flex-col items-center justify-center mt-3">
               {selectedPlanP === "standard" && (
-                <p className="text-[#398AF5] font-semibold text-2xl">
-                  8,000–10,000 ETB
+                <p className="text-[#00f80c] font-semibold text-2xl">
+                  10,000–12,000 ETB
                 </p>
               )}
               {/* {selectedPlanP === "professional" && (
-                <p className="text-[#398AF5] font-semibold text-2xl">
-                  8000–10000 ETB
+                <p className="text-[#00f80c] font-semibold text-2xl">
+                  11000–13000 ETB
                 </p>
               )} */}
               <p className="text-gray-200 font-light text-[12px] mt-1 opacity-75">
@@ -258,43 +256,43 @@ function PriceCard() {
               </p>
             </div>
             <div className="flex flex-col space-y-3 items-start  my-5">
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  3-5 Concept Designs
+                  6-10 Screen Designs
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  Unlimited Revisions
+                  UX Research & Analysis
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  Full Brand Kit
+                  Wireframes & Mockups
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  Logo + Banner + Poster
+                  Complete Style Guide
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
-                  Social Media Pack
+                  Clickable Prototype
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px]">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
                   7-15 Day Delivery
                 </span>
               </div>
-              <div className="flex items-center gap-2 text-blue-500 text-[16px] ">
+              <div className="flex items-center gap-2 text-green-500 text-[16px]">
                 <BsCheckCircleFill />
                 <span className="text-white text-base font-light ">
                   24/7 Premium Support
@@ -306,6 +304,6 @@ function PriceCard() {
       </motion.div>
     </div>
   );
-}
+};
 
-export default PriceCard;
+export default PriceCardUI;
